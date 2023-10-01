@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+:root{
+    --body:#201B2C;
+    --border: #77FFC0;
+    --font:#77FFC0;
+    --font2:#201B2C;
+    --input:#6F9E88; 
+    --table-body: #D9D9D9;
+    --voltar: #46396459;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--body);
+    height: 100vh;
+}
+table{
+    color: #FFFFFF;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 20px;
+}
+tr,th,td{
+    border: 1px solid var(--input);
+    padding: 10px;
+}
+h1{
+    color: var(--font);
+    text-align: center;
+}
+.hr{
+    border: 2px solid #77FFC0;
+}
+a{
+    padding: 10px;
+}
+.voltar{
+    background-color: var(--voltar);
+    padding: 15px 90px;
+    border-radius: 10px;
+}
+
+.voltar:hover{
+    background-color: var(--input);
+}
