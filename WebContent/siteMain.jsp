@@ -108,7 +108,7 @@ a:hover{
         <a href="./filme/cadastrarFilme.jsp">Cadastrar Filme</a>
         <a href="./filme/listFilmes.jsp">Listar Filmes</a>
         <a href="./favorito/favoritoAll.jsp">Todos os favoritos</a>
-        <a href="#">Sua lista de favoritos</a>
+        <a href="./favorito/meusFavoritos.jsp">Sua lista de favoritos</a>
       </nav>
     </header>
     <h1>Os mais esperados</h1>

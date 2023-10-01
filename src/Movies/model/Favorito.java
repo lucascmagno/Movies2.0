@@ -12,6 +12,9 @@ public class Favorito {
 	public Favorito() {
 		
 	}
+	public Favorito(String usuario) {
+		this.usuario = usuario;
+	}
 	public Favorito(int idFilme, int idUsuario) {
 		this.idFilme = idFilme;
 		this.idUsuario = idUsuario; 

@@ -18,7 +18,8 @@ public class FavoritoDao {
             ResultSet rs = con.executeQuery("SELECT fav.idfavorito as id, u.usuario, f.titulo AS filme, f.data_lancamento, f.duracao\r\n"
             		+ "FROM usuario u\r\n"
             		+ "INNER JOIN favorito fav ON u.idUsuario = fav.idUsuario\r\n"
-            		+ "INNER JOIN filme f ON fav.idFilme = f.idFilme order by fav.idfavorito;");
+            		+ "INNER JOIN filme f ON fav.idFilme = f.idFilme"
+            		+ " order by fav.idfavorito;");
             
             while (rs.next()) {
                 Favorito favAll = new Favorito();
@@ -29,6 +30,37 @@ public class FavoritoDao {
                 favAll.setDuracao(rs.getString("duracao"));
                 favoritosAll.add(favAll);
             }
+        } finally {
+            if (con != null) {
+                con.fecharConexao();
+            }
+        }
+
+        return favoritosAll;
+    }
+	
+	public List<Favorito> listarFavoritosLogado(Favorito fav) throws SQLException {
+        Conexao con = null;
+        List<Favorito> favoritosAll = new ArrayList<>();
+        try {
+            con = new Conexao();
+            ResultSet rs = con.executeQuery("SELECT fav.idfavorito, f.titulo AS filme, f.data_lancamento, f.duracao\r\n"
+            		+ "FROM usuario u\r\n"
+            		+ "INNER JOIN favorito fav ON u.idUsuario = fav.idUsuario\r\n"
+            		+ "INNER JOIN filme f ON fav.idFilme = f.idFilme\r\n"
+            		+ "WHERE u.usuario = '"+fav.getUsuario()+"'"
+            				+ "order by fav.idFavorito;");
+            
+            while (rs.next()) {
+                Favorito favAll = new Favorito();
+                favAll.setIdFavorito(rs.getInt("idfavorito"));
+                favAll.setUsuario(fav.getUsuario()); // Define o usuário com base no parâmetro passado
+                favAll.setFilme(rs.getString("filme"));
+                favAll.setDataLancamento(rs.getString("data_lancamento"));
+                favAll.setDuracao(rs.getString("duracao"));
+                favoritosAll.add(favAll);
+            }
+
         } finally {
             if (con != null) {
                 con.fecharConexao();
