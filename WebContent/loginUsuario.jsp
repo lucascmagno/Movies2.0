@@ -17,7 +17,8 @@
         <input type="password" name="senha" id="password"></span>
         <span class="span"><a href="#">Esqueceu a senha?</a></span>
         <input class="submit" type="submit" value="Log in">
-        <span class="span">Ainda não tem conta? <a href="./cadastrarUsuario.jsp">Cadastrar</a></span>
+        <span class="span">Ainda não tem conta? <a href="./cadastrarUsuario.jsp">Cadastrar</a></span><br>
+        
       </form>
 </body>
 </html>

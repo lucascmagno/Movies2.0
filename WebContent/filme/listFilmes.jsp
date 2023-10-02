@@ -11,56 +11,103 @@
 <title>Insert title here</title>
 <link href="../css/listFilmes.css">
 <style>
-	:root{
-    --body:#201B2C;
-    --border: #77FFC0;
-    --font:#77FFC0;
-    --font2:#201B2C;
-    --input:#6F9E88; 
-    --table-body: #D9D9D9;
-    --voltar: #46396459;
+header {
+    background-color: #201B2C; /* Azul escuro */
+    padding: 10px 0;
+    padding-left: 20px;
 }
-*{
+
+header a {
+    text-decoration: none;
+    color: #83F2BF; /* Verde claro */
+    font-weight: bold;
+}
+	/* CSS com foco nas cores #201B2C (azul escuro) e #83F2BF (verde claro) */
+body {
+    background-color: #201B2C; /* Azul escuro */
+    font-family: Arial, sans-serif;
+    color: #ffffff; /* Branco */
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: var(--body);
-    height: 100vh;
-}
-table{
-    color: #FFFFFF;
-    border-collapse: collapse;
-    margin: auto;
-    margin-top: 20px;
-}
-tr,th,td{
-    border: 1px solid var(--input);
-    padding: 10px;
-}
-h1{
-    color: var(--font);
-    text-align: center;
-}
-.hr{
-    border: 2px solid #77FFC0;
-}
-a{
-    padding: 10px;
-}
-.voltar{
-    background-color: var(--voltar);
-    padding: 15px 90px;
-    border-radius: 10px;
+
+a {
+    text-decoration: none;
+    color: #83F2BF; /* Verde claro */
 }
 
-.voltar:hover{
-    background-color: var(--input);
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: #83F2BF; /* Verde claro */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hr {
+    border-top: 2px solid #83F2BF; /* Verde claro */
+    margin: 20px auto;
+    width: 80%;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #201B2C; /* Azul escuro */
+    color: #ffffff; /* Branco */
+}
+
+table th {
+    background-color: #201B2C; /* Azul escuro */
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #2D2840; /* Azul escuro mais escuro */
+}
+
+table tr:hover {
+    background-color: #3A3461; /* Azul médio mais escuro */
+}
+
+p {
+    text-align: center;
+    color: #ffffff; /* Branco */
+    margin-top: 20px;
+}
+
+/* Estilizando os botões Editar e Excluir */
+.edit-button,
+.delete-button {
+    background-color: #83F2BF; /* Verde claro */
+    color: #201B2C; /* Azul escuro */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px; 
+    margin-right: 5px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #60D5A3; /* Verde claro mais escuro */
 }
 </style>
 </head>
-<body>
-	<a href="../siteMain.jsp" class="voltar"><img src="arrowLeft.svg" alt=""></a>
+<body
+<header>
+    <a href="../siteMain.jsp">Início</a> >
+    <a href="#">filmes</a>
+</header>
     <h1>Filmes</h1>
     <div class="hr"></div>
     <% 

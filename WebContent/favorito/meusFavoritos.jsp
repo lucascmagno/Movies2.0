@@ -11,6 +11,17 @@
 <title>Minha Lista de Favoritos</title>
 <link href="../css/listFilmes.css">
 <style>
+header {
+    background-color: #201B2C; /* Azul escuro */
+    padding: 10px 0;
+    padding-left: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #83F2BF; /* Verde claro */
+    font-weight: bold;
+}
 body {
     background-color: #201B2C;
 }
@@ -90,7 +101,10 @@ h1 {
 </style>
 </head>
 <body>
-<a href="../siteMain.jsp" class="voltar"><img src="arrowLeft.svg" alt="">Voltar</a>
+<header>
+    <a href="../siteMain.jsp">Início</a> >
+    <a href="#">Meus favoritos</a>
+</header>
 <h1>Minha Lista de Favoritos</h1>
 <div class="hr"></div>
 
